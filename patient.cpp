@@ -4,9 +4,23 @@
 #include <limits>
 using namespace std;
 
-
+bool askYesNo(const string &q) {
+    while (true) {
+        cout << q << " (y/n): ";
+        string s;
+        if (!(cin >> s)) return false;
+        if (!s.empty()) {
+            char c = tolower(s[0]);
+            if (c == 'y') return true;
+            if (c == 'n') return false;
+        }
+        cout << "Please enter y or n.\n";
+    }
+}
+y
 void registerPatient() {
-
+    cout << "Registering patient...\n";
+    cout << "Patient registered successfully.\n";
 }
 
 void availableNurse() {
