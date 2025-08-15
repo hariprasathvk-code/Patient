@@ -17,19 +17,33 @@ bool askYesNo(const string &q) {
         cout << "Please enter y or n.\n";
     }
 }
-y
+
 void registerPatient() {
     cout << "Registering patient...\n";
     cout << "Patient registered successfully.\n";
 }
 
 void availableNurse() {
-    
+    while (!askYesNo("Is nurse available?")) {
+        cout << "Waiting for available nurse...\n";
+    }
+    cout << "Nurse is available.\n";
+    cin.ignore(numeric_limits<streamsize>::max(), '\n'); // clear buffer
+    cout << "Recording health condition...\n";
+    string notes;
+    getline(cin, notes);
+    cout << "Health condition recorded.\n";
 }
 
 void availableDoctor() {
-    
+    while (!askYesNo("Is doctor available?")) {
+        cout << "Waiting for available doctor...\n";
+    }
+    cout << "Doctor is available.\n";
+    cout << "Assigning patient to doctor...\n";
+    cout << "Patient assigned.\n";
 }
+
 
 void needFollowUp() {
     
