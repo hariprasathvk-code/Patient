@@ -46,11 +46,23 @@ void availableDoctor() {
 
 
 void needFollowUp() {
-    
+    while (askYesNo("Is follow-up needed?")) {
+        cout << "Arranging appointment...\n";
+        cout << "Appointment arranged.\n";
+       
+    }
+    cout << "No follow-up needed. Proceed to Medication check.\n";
 }
 
+
 void needMedication() {
-    
+    if (askYesNo("Is medication needed?")) {
+        cout << "Giving patient prescription...\n";
+        cout << "Prescription given.\n";
+    } else {
+        cout << "No medication needed.\n";
+    }
+    cout << "Return to Termination (T).\n";
 }
 
 int main() {
