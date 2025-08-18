@@ -62,7 +62,6 @@ void needMedication() {
     } else {
         cout << "No medication needed.\n";
     }
-    cout << "Return to Termination (T).\n";
 }
 
 int main() {
